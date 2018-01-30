@@ -1,0 +1,15 @@
+<launch>
+  <!-- Debug Info -->
+  <arg name="debug" default="false" />
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
+  <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+
+   <node name="coordinator" pkg="x50_interface" type="coordinator"  output="screen" />
+
+  <!-- If database loading was enabled, start mongodb as well 
+  <include file="$(find x50_moveit_config)/launch/home_warehouse_db.launch" if="$(arg db)"/>
+  -->  
+  <node name="gui_coordinator" pkg="x50_interface"   type="gui_coordinator" />
+  </node>
+
+</launch>

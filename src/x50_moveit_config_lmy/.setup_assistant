@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: x50_description
+    relative_path: urdf/x50_moveit_lmy.urdf
+  SRDF:
+    relative_path: config/x50.srdf
+  CONFIG:
+    author_name: lmy
+    author_email: lmy_hit@163.com
+    generated_timestamp: 1496219575
